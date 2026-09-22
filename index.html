@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FitTrack - practical body fat loss, nutrition, workouts and progress tracking.">
+  <title>FitTrack — Lose Body Fat. Build a Better You.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="FitTrack home">
+        <span class="brand-mark"><i class="fa-solid fa-leaf"></i></span>
+        <span>
+          <strong>FitTrack</strong>
+          <small>HEALTH • FITNESS • YOU</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a class="active" href="#top">Home</a>
+        <a href="diet.html">Diet</a>
+        <a href="workout.html">Workout</a>
+        <a href="calculators.html">Calculators <i class="fa-solid fa-chevron-down"></i></a>
+        <a href="recipes.html">Recipes</a>
+        <a href="articles.html">Articles</a>
+        <a href="about.html">About</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="icon-btn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <a href="calculators.html" class="btn btn-primary btn-small">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section-pad">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">YOUR FITNESS JOURNEY STARTS HERE</p>
+          <h1>Lose body fat.<br>Build a <span>better you.</span></h1>
+          <p class="hero-text">
+            Simple diet, effective workouts and practical guidance to help you reach your
+            fitness goals. Get healthier, stronger and more confident — one step at a time.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="calculators.html" class="btn btn-primary">Calculate My Plan <i class="fa-solid fa-arrow-right"></i></a>
+            <a href="diet.html" class="btn btn-outline">Explore Diet</a>
+          </div>
+
+          <div class="hero-features">
+            <div><i class="fa-solid fa-utensils"></i><span>Personalized<br>Diet Plans</span></div>
+            <div><i class="fa-solid fa-dumbbell"></i><span>Effective<br>Workouts</span></div>
+            <div><i class="fa-solid fa-calculator"></i><span>Helpful<br>Calculators</span></div>
+            <div><i class="fa-solid fa-chart-line"></i><span>Track Your<br>Progress</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-photo">
+            <div class="hero-photo-overlay"></div>
+            <div class="scribble">Better<br>Habits<br><span>Bigger Results</span></div>
+          </div>
+
+          <div class="goal-card glass-card">
+            <div class="goal-ring"><span>86%</span></div>
+            <div>
+              <small>Your Goals</small>
+              <strong>Getting stronger</strong>
+              <p>Healthy body<br>Happy mind<br>Better you</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section class="calculator-section section-pad" id="calculator">
+      <div class="container calculator-box reveal">
+        <div class="calculator-intro">
+          <p class="eyebrow">QUICK & EASY</p>
+          <h2>Body Fat & Fitness Calculator</h2>
+          <p>Get your estimated body fat, BMI, calorie needs and more — in just a few clicks.</p>
+          <button class="btn btn-primary" id="tryCalculator">Try Calculator <i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+        <form class="calc-form" id="fitnessForm">
+          <div class="field-group">
+            <label>Gender</label>
+            <div class="segmented">
+              <label><input type="radio" name="gender" value="male" checked><span>Male</span></label>
+              <label><input type="radio" name="gender" value="female"><span>Female</span></label>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <label class="field">
+              <span>Age</span>
+              <input type="number" id="age" value="25" min="15" max="100">
+            </label>
+            <label class="field">
+              <span>Height (cm)</span>
+              <input type="number" id="height" value="178" min="100" max="230">
+            </label>
+            <label class="field">
+              <span>Weight (kg)</span>
+              <input type="number" id="weight" value="70" min="30" max="250">
+            </label>
+            <label class="field">
+              <span>Activity Level</span>
+              <select id="activity">
+                <option value="1.2">Sedentary</option>
+                <option value="1.375">Lightly active</option>
+                <option value="1.55" selected>Moderately active</option>
+                <option value="1.725">Very active</option>
+                <option value="1.9">Extra active</option>
+              </select>
+            </label>
+          </div>
+
+          <button class="calculate-btn" type="submit">Calculate Result</button>
+        </form>
+
+        <div class="result-card">
+          <h3>Your Results</h3>
+          <div class="result-main">
+            <div class="bmi-ring"><div><small>BMI</small><strong id="bmiValue">22.1</strong><span id="bmiStatus">Normal</span></div></div>
+            <div class="result-list">
+              <div><span>Body Fat (Est.)</span><strong id="bodyFat">15–18%</strong></div>
+              <div><span>Daily Calories</span><strong id="dailyCalories">2,500 kcal</strong></div>
+              <div><span>Fat-Loss Calories</span><strong id="fatLossCalories">1,900–2,100 kcal</strong></div>
+            </div>
+          </div>
+          <p class="result-note"><i class="fa-regular fa-lightbulb"></i> Body fat percentage is an estimate and not a medical diagnosis.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features section-pad" id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow">WHY FITTRACK?</p>
+            <h2>Everything You Need for Fat Loss</h2>
+            <p>From personalized plans to progress tracking, we've got you covered on your fitness journey.</p>
+          </div>
+          <a href="calculators.html" class="text-link">Explore All Features <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <div class="feature-icon green"><i class="fa-solid fa-utensils"></i></div>
+            <h3>Diet Planner</h3>
+            <p>Custom meal plans for your goal, preference and budget.</p>
+            <a href="diet.html">Explore Diet <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon teal"><i class="fa-solid fa-dumbbell"></i></div>
+            <h3>Workout Plans</h3>
+            <p>Home & gym workouts for all fitness levels.</p>
+            <a href="workout.html">View Workouts <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon blue"><i class="fa-solid fa-calculator"></i></div>
+            <h3>Calculators</h3>
+            <p>BMI, calories, protein, body fat and more.</p>
+            <a href="calculators.html">Try Calculators <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon purple"><i class="fa-solid fa-book-open"></i></div>
+            <h3>Fitness Education</h3>
+            <p>Learn the science behind fat loss and healthy living.</p>
+            <a href="articles.html">Read Articles <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon red"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Progress Tracker</h3>
+            <p>Track your weight, measurements and daily habits over time.</p>
+            <a href="progress.html">Start Tracking <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIET + WORKOUT -->
+    <section class="plans section-pad" id="diet">
+      <div class="container plans-grid">
+        <article class="plan-card diet-card reveal" id="recipes">
+          <div class="plan-content">
+            <p class="eyebrow">DIET PLANS</p>
+            <h2>Nutritious Meals.<br>Lasting Results.</h2>
+            <p>Easy-to-follow, balanced meal plans that fit your lifestyle and taste preferences.</p>
+            <a href="recipes.html" class="btn btn-primary">View Diet Plans <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="food-image" role="img" aria-label="Healthy balanced meal"></div>
+          <div class="plan-tags">
+            <span><i class="fa-solid fa-circle-check"></i> Customized for your goal</span>
+            <span><i class="fa-solid fa-leaf"></i> Veg / Non-Veg options</span>
+            <span><i class="fa-solid fa-wallet"></i> Easy & affordable recipes</span>
+          </div>
+        </article>
+
+        <article class="plan-card workout-card reveal" id="workout">
+          <div class="plan-content">
+            <p class="eyebrow">WORKOUT PLANS</p>
+            <h2>Train Smarter.<br>Get Stronger.</h2>
+            <p>Structured workouts for every fitness level, with clear instructions and progress tracking.</p>
+            <a href="workout.html" class="btn btn-primary">View Workout Plans <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+          <div class="workout-image" role="img" aria-label="Fitness training"></div>
+          <div class="plan-tags">
+            <span><i class="fa-solid fa-person-running"></i> Beginner to Advanced</span>
+            <span><i class="fa-solid fa-house"></i> Home & Gym Workouts</span>
+            <span><i class="fa-solid fa-circle-play"></i> Visual Guide & Tips</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="education section-pad" id="articles">
+      <div class="container education-grid">
+        <div class="education-left reveal">
+          <p class="eyebrow">FAT LOSS EDUCATION</p>
+          <h2>Learn. Improve. Succeed.</h2>
+          <p>Understand the basics and make better choices for your health and fitness.</p>
+          <a href="articles.html#article-list" class="text-link">Browse Articles <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="topic-list reveal" id="article-list">
+          <a href="articles.html#what-is-body-fat"><span>🔥</span> What is Body Fat?</a>
+          <a href="articles.html#calorie-deficit-explained"><span>⚡</span> Calorie Deficit Explained</a>
+          <a href="articles.html#protein-muscle-preservation"><span>🥩</span> Protein & Muscle Preservation</a>
+          <a href="articles.html#carbs-vs-fats"><span>🍚</span> Carbs vs Fats</a>
+          <a href="articles.html#sleep-fat-loss"><span>😴</span> Sleep & Fat Loss</a>
+          <a href="articles.html#common-fat-loss-mistakes"><span>🎯</span> Common Fat Loss Mistakes</a>
+        </div>
+
+        <div class="myth-box reveal">
+          <p class="eyebrow">MYTH VS FACT</p>
+          <h2>Get the Facts. Not the Fads.</h2>
+          <p>Clear, science-based answers to common fat loss myths and misconceptions.</p>
+          <a href="articles.html#myth" class="text-link">View All Myths <i class="fa-solid fa-arrow-right"></i></a>
+          <div class="myth-fact" id="myth">
+            <div class="myth">
+              <small>MYTH</small>
+              <strong>Carbs automatically make you fat.</strong>
+            </div>
+            <div class="arrow"><i class="fa-solid fa-arrow-right"></i></div>
+            <div class="fact">
+              <small>FACT</small>
+              <strong>Fat loss depends on energy balance, protein, activity, sleep and consistency.</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRESS -->
+    <section class="progress-section section-pad" id="progress">
+      <div class="container progress-box reveal">
+        <div class="progress-intro">
+          <p class="eyebrow">TRACK YOUR PROGRESS</p>
+          <h2>Small Steps.<br>Big Changes.</h2>
+          <p>Log your daily habits, track your measurements and see your progress over time.</p>
+          <a href="progress.html" class="btn btn-primary" id="trackBtn">Start Tracking <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-head">
+            <div><strong>Weekly Progress</strong><small>Weight & Waist</small></div>
+            <span><i class="fa-solid fa-arrow-trend-down"></i> Progress</span>
+          </div>
+          <div class="chart">
+            <svg viewBox="0 0 480 190" preserveAspectRatio="none" aria-label="Example progress chart">
+              <defs>
+                <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#19a463" stop-opacity=".22"/>
+                  <stop offset="100%" stop-color="#19a463" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path class="grid-line" d="M20 35H460M20 80H460M20 125H460M20 170H460"/>
+              <path class="area" d="M20 55 C95 63, 115 75, 170 82 S275 104, 330 120 S410 140, 460 153 L460 170 L20 170 Z"/>
+              <path class="weight-line" d="M20 55 C95 63, 115 75, 170 82 S275 104, 330 120 S410 140, 460 153"/>
+              <path class="waist-line" d="M20 90 C95 95, 115 103, 170 110 S275 120, 330 135 S410 148, 460 162"/>
+              <circle cx="20" cy="55" r="4"/><circle cx="170" cy="82" r="4"/><circle cx="330" cy="120" r="4"/><circle cx="460" cy="153" r="4"/>
+            </svg>
+            <div class="chart-labels"><span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span></div>
+          </div>
+          <div class="metric-row">
+            <div><small>Weight</small><strong>76.5 kg</strong><span>↓ 2.5 kg</span></div>
+            <div><small>Waist</small><strong>33 in</strong><span>↓ 1.5 in</span></div>
+          </div>
+        </div>
+
+        <div class="daily-card">
+          <div class="daily-head">
+            <div><strong>Daily Tracker</strong><small>Log your daily habits, track your progress over time</small></div>
+            <div class="completion">78%</div>
+          </div>
+          <ul>
+            <li><span>💧</span> Water <strong>5 / 8 glasses</strong></li>
+            <li><span>🥩</span> Protein <strong>92 / 130 g</strong></li>
+            <li><span>🔥</span> Calories <strong>1,420 / 1,900</strong></li>
+            <li><span>🚶</span> Steps <strong>7,850 / 10,000</strong></li>
+            <li><span>🏋️</span> Workout <strong class="done">✓ Done</strong></li>
+            <li><span>😴</span> Sleep <strong>7h 20m</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="cta-image"></div>
+      <div class="container cta-content">
+        <div>
+          <p class="eyebrow">READY TO GET STARTED?</p>
+          <h2>Your Healthier You<br>is Just a Click Away.</h2>
+          <p>Build better habits, stay consistent and work towards a stronger tomorrow.</p>
+        </div>
+        <a href="calculators.html" class="btn btn-primary">Start Your Plan <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand light" href="#top">
+          <span class="brand-mark"><i class="fa-solid fa-leaf"></i></span>
+          <span><strong>FitTrack</strong><small>HEALTH • FITNESS • YOU</small></span>
+        </a>
+        <p>Better habits. Healthier you. A stronger tomorrow.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a><a href="diet.html">Diet</a><a href="workout.html">Workout</a><a href="calculators.html">Calculators</a><a href="articles.html">Articles</a>
+      </div>
+
+      <div>
+        <h4>Calculators</h4>
+        <a href="calculators.html#bmi">BMI Calculator</a><a href="calculators.html#calorie">Calorie Calculator</a><a href="calculators.html#protein">Protein Calculator</a><a href="calculators.html#body-fat">Body Fat Estimate</a>
+      </div>
+
+      <div>
+        <h4>Support</h4>
+        <a href="index.html#about">About Us</a><a href="index.html#contact">Contact</a><a href="index.html#privacy">Privacy Policy</a><a href="index.html#terms">Terms & Conditions</a>
+      </div>
+
+      <div>
+        <h4>Follow Us</h4>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© 2026 FitTrack. All rights reserved.</p>
+      <p>This website provides general fitness and nutrition information<br>and is not a substitute for professional medical advice.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>

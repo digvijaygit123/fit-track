@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="FitTrack fitness, nutrition and fat loss tools.">
+
+    <title>Diet Plans | FitTrack</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container nav-wrap">
+
+            <a class="brand" href="index.html">
+                <span class="brand-mark">
+                    <i class="fa-solid fa-leaf"></i>
+                </span>
+
+                <span>
+                    <strong>FitTrack</strong>
+                    <small>HEALTH • FITNESS • YOU</small>
+                </span>
+            </a>
+
+            <button class="menu-toggle" aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="main-nav">
+                <a href="index.html">Home</a>
+                <a class="active" href="diet.html">Diet</a>
+                <a href="workout.html">Workout</a>
+                <a href="calculators.html">Calculators</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="articles.html">Articles</a>
+                <a href="about.html">About</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a class="btn btn-primary btn-small" href="calculators.html">
+                    Get Started
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container">
+
+                <p class="eyebrow">SMART NUTRITION</p>
+
+                <h1>
+                    Diet plans for
+                    <span style="color: var(--green);">
+                        real life.
+                    </span>
+                </h1>
+
+                <p>
+                    Explore balanced meal ideas by food preference.
+                    Calories are illustrative and portions should be
+                    adjusted to your own needs.
+                </p>
+
+            </div>
+        </section>
+
+        <!-- Diet Plans -->
+        <section class="section">
+            <div class="container">
+
+                <!-- Filter Tabs -->
+                <div class="tabs" id="tabs">
+
+                    <button class="tab active" data-f="all">
+                        All
+                    </button>
+
+                    <button class="tab" data-f="veg">
+                        Vegetarian
+                    </button>
+
+                    <button class="tab" data-f="egg">
+                        Eggitarian
+                    </button>
+
+                    <button class="tab" data-f="nonveg">
+                        Non-Veg
+                    </button>
+
+                    <button class="tab" data-f="protein">
+                        High Protein
+                    </button>
+
+                </div>
+
+                <!-- Meals -->
+                <div class="inner-grid" id="meals">
+
+                    <!-- Meal 1 -->
+                    <article class="card meal" data-tags="veg protein">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80"
+                            alt="Paneer Power Bowl"
+                        >
+
+                        <span class="pill">
+                            Veg
+                        </span>
+
+                        <h3>
+                            Paneer Power Bowl
+                        </h3>
+
+                        <p>
+                            Paneer, rice, mixed vegetables and curd.
+                        </p>
+
+                        <strong>
+                            550 kcal • 32g protein
+                        </strong>
+
+                    </article>
+
+                    <!-- Meal 2 -->
+                    <article class="card meal" data-tags="egg protein">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80"
+                            alt="Egg and Oats Breakfast"
+                        >
+
+                        <span class="pill">
+                            Egg
+                        </span>
+
+                        <h3>
+                            Egg & Oats Breakfast
+                        </h3>
+
+                        <p>
+                            Eggs, oats, fruit and vegetables.
+                        </p>
+
+                        <strong>
+                            430 kcal • 28g protein
+                        </strong>
+
+                    </article>
+
+                    <!-- Meal 3 -->
+                    <article class="card meal" data-tags="nonveg protein">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=800&q=80"
+                            alt="Chicken Rice Plate"
+                        >
+
+                        <span class="pill">
+                            Nonveg
+                        </span>
+
+                        <h3>
+                            Chicken Rice Plate
+                        </h3>
+
+                        <p>
+                            Grilled chicken, rice, vegetables and yogurt.
+                        </p>
+
+                        <strong>
+                            600 kcal • 45g protein
+                        </strong>
+
+                    </article>
+
+                    <!-- Meal 4 -->
+                    <article class="card meal" data-tags="veg">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80"
+                            alt="Chickpea Salad"
+                        >
+
+                        <span class="pill">
+                            Veg
+                        </span>
+
+                        <h3>
+                            Chickpea Salad
+                        </h3>
+
+                        <p>
+                            Chickpeas, greens, vegetables and lemon dressing.
+                        </p>
+
+                        <strong>
+                            380 kcal • 17g protein
+                        </strong>
+
+                    </article>
+
+                    <!-- Meal 5 -->
+                    <article class="card meal" data-tags="egg">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80"
+                            alt="Egg Wrap"
+                        >
+
+                        <span class="pill">
+                            Egg
+                        </span>
+
+                        <h3>
+                            Egg Wrap
+                        </h3>
+
+                        <p>
+                            Whole-wheat wrap, egg and crunchy vegetables.
+                        </p>
+
+                        <strong>
+                            420 kcal • 25g protein
+                        </strong>
+
+                    </article>
+
+                    <!-- Meal 6 -->
+                    <article class="card meal" data-tags="nonveg">
+
+                        <img
+                            src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&q=80"
+                            alt="Chicken Roti Bowl"
+                        >
+
+                        <span class="pill">
+                            Nonveg
+                        </span>
+
+                        <h3>
+                            Chicken Roti Bowl
+                        </h3>
+
+                        <p>
+                            Chicken, roti, vegetables and salad.
+                        </p>
+
+                        <strong>
+                            520 kcal • 40g protein
+                        </strong>
+
+                    </article>
+
+                </div>
+
+                <!-- Nutrition Basics -->
+                <div class="panel" style="margin-top: 25px;">
+
+                    <h3>
+                        Fat-loss nutrition basics
+                    </h3>
+
+                    <p>
+                        Build meals around a protein source, vegetables
+                        or fruit, mostly minimally processed foods, and
+                        portions that fit your energy needs. Avoid extreme
+                        restriction and focus on a routine you can sustain.
+                    </p>
+
+                    <div class="notice">
+                        If you have a medical condition, take medication
+                        affected by diet, are pregnant, or have a history
+                        of an eating disorder, consult a qualified healthcare
+                        professional before changing your diet.
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+            <!-- Brand -->
+            <div>
+
+                <a class="brand light" href="index.html">
+
+                    <span class="brand-mark">
+                        <i class="fa-solid fa-leaf"></i>
+                    </span>
+
+                    <span>
+                        <strong>FitTrack</strong>
+                        <small>HEALTH • FITNESS • YOU</small>
+                    </span>
+
+                </a>
+
+                <p>
+                    Better habits. Healthier you. A stronger tomorrow.
+                </p>
+
+            </div>
+
+            <!-- Explore -->
+            <div>
+
+                <h4>Explore</h4>
+
+                <a href="diet.html">Diet</a>
+                <a href="workout.html">Workout</a>
+                <a href="recipes.html">Recipes</a>
+                <a href="articles.html">Articles</a>
+
+            </div>
+
+            <!-- Tools -->
+            <div>
+
+                <h4>Tools</h4>
+
+                <a href="calculators.html">
+                    Calculators
+                </a>
+
+                <a href="progress.html">
+                    Progress Tracker
+                </a>
+
+            </div>
+
+            <!-- Company -->
+            <div>
+
+                <h4>Company</h4>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="#">
+                    Privacy
+                </a>
+
+                <a href="#">
+                    Terms
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 FitTrack. All rights reserved.
+            </p>
+
+            <p>
+                General fitness information only — not medical advice.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Diet Filter -->
+    <script>
+        document.querySelectorAll('#tabs .tab').forEach(button => {
+
+            button.onclick = () => {
+
+                document
+                    .querySelectorAll('#tabs .tab')
+                    .forEach(tab => {
+                        tab.classList.remove('active');
+                    });
+
+                button.classList.add('active');
+
+                const filter = button.dataset.f;
+
+                document
+                    .querySelectorAll('.meal')
+                    .forEach(meal => {
+
+                        meal.style.display =
+                            filter === 'all' ||
+                            meal.dataset.tags.includes(filter)
+                                ? 'block'
+                                : 'none';
+
+                    });
+
+            };
+
+        });
+    </script>
+
+</body>
+
+</html>
